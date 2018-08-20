@@ -9,7 +9,7 @@ class AppNavbar extends Component {
           Client Panel
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
-          <span classNmae="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarMain">
           <ul className="navbar-nav mr-auto">
