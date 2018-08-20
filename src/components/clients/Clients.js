@@ -19,7 +19,7 @@ class Clients extends Component {
             <div className="col-md-6">
               <h2>
                 {' '}
-                <i class="fas fa-database" /> Data Set:{' '}
+                <i className="fas fa-database" /> Data Set:{' '}
               </h2>
             </div>
           </div>
@@ -74,3 +74,26 @@ export default compose(
     clients: state.firestore.ordered.clients
   }))
 )(Clients);
+
+
+//hard Coded data
+// const clients = [
+//   {
+//     id: "56473829",
+//     product: "Apple iphone 6s",
+//     color: "Dark Grey",
+//     price: "CHF 769"
+//   },
+//   {
+//     id: "123456789",
+//     product: "Samsung Galaxy S8",
+//     color: "Midnight Black",
+//     price: "CHF 569"
+//   },
+//   {
+//     id: "98765e11",
+//     product: "Huawei P9",
+//     color: "Mystic Silver",
+//     price: "CHF 272"
+//   },
+// ];

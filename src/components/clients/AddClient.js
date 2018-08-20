@@ -62,7 +62,7 @@ class AddClient extends Component {
               <div className="form-group">
                 <label htmlFor="color">Color</label>
                 <input
-                  type="color"
+                  type="text"
                   className="form-control"
                   name="color"
                   onChange={this.onChange}
