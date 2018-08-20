@@ -14,7 +14,7 @@ class Clients extends Component {
     id: "123456789",
     product: "Samsung Galaxy S8",
     color: "Midnight Black",
-    price: "CHf 569"
+    price: "CHF 569"
   },
   {
   id: "98765e11",
