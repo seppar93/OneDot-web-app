@@ -1,29 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import Spinner from '../layout/Spinner';
+
 
 class Clients extends Component {
   render () {
-    const clients = [
-      {
-      id: "434343444",
-      product: "Apple iphone 6s",
-      color: "Dark Grey",
-      price: "CHF 769"
-    },
-    {
-    id: "123456789",
-    product: "Samsung Galaxy S8",
-    color: "Midnight Black",
-    price: "CHF 569"
-  },
-  {
-  id: "98765e11",
-  product: "Huawei P9",
-  color: "Mystic Silver",
-  price: "CHF 272"
-  },
-  ];
-  if(clients){
+    const { clients } = this.props;
+
+    if(clients) {
       return (
         <div>
           <div className="row">
@@ -38,10 +26,6 @@ class Clients extends Component {
               </h5>
             </div>
           </div>
-
-
-
-
 
           <table className="table table-striped">
             <thead className="thead-inverse">
@@ -63,8 +47,7 @@ class Clients extends Component {
                   <td>
                     <Link
                       to={`/client/${client.id}`}
-                      className="btn btn-secondary btn-sm"
-                    >
+                      className="btn btn-secondary btn-sm">
                       <i className="fas fa-arrow-circle-right" /> Details
                     </Link>
                   </td>
@@ -75,7 +58,43 @@ class Clients extends Component {
 
         </div>
       );
+    } else {
+      <Spinner />;
     }
   }
 }
-export default Clients;
+
+Clients.propTypes = {
+  firestore: PropTypes.object.isRequired,
+  clients: PropTypes.array
+};
+
+export default compose(
+  firestoreConnect([{ collection: 'clients' }]),
+  connect((state, props) => ({
+    clients: state.firestore.ordered.clients
+  }))
+)(Clients);
+
+
+
+// const clients = [
+//   {
+//     id: "56473829",
+//     product: "Apple iphone 6s",
+//     color: "Dark Grey",
+//     price: "CHF 769"
+//   },
+//   {
+//     id: "123456789",
+//     product: "Samsung Galaxy S8",
+//     color: "Midnight Black",
+//     price: "CHF 569"
+//   },
+//   {
+//     id: "98765e11",
+//     product: "Huawei P9",
+//     color: "Mystic Silver",
+//     price: "CHF 272"
+//   },
+// ];
