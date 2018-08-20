@@ -6,7 +6,7 @@ class AppNavbar extends Component {
     return (<nav className="nav navbar navbar-expand-md navbar-dark bg-primary mb-4">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          ClientPanel
+          Client Panel
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
           <span classNmae="navbar-toggler-icon"></span>
