@@ -14,7 +14,7 @@ class EditClient extends Component {
     this.colorInput = React.createRef();
     this.priceInput = React.createRef();
   }
-
+  // static validation()
   onSubmit = e => {
     e.preventDefault();
 
