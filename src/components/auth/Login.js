@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { compose } from 'redux';
-// import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import { firebaseConnect } from 'react-redux-firebase';
-// import { notifyUser } from '../../actions/notifyActions';
-// import Alert from '../layout/Alert';
+import { notifyUser } from '../../actions/notifyActions';
+import Alert from '../layout/Alert';
 
 class Login extends Component {
   state = {
@@ -86,13 +86,12 @@ Login.propTypes = {
   notifyUser: PropTypes.func.isRequired
 };
 
-export default firebaseConnect()(Login);
-// export default compose(
-//   firebaseConnect(),
-//   connect(
-//     (state, props) => ({
-//       notify: state.notify
-//     }),
-//     { notifyUser }
-//   )
-// )(Login);
+export default compose(
+  firebaseConnect(),
+  connect(
+    (state, props) => ({
+      notify: state.notify
+    }),
+    { notifyUser }
+  )
+)(Login);
