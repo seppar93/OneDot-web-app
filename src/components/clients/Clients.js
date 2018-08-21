@@ -97,3 +97,18 @@ export default compose(
 //     price: "CHF 272"
 //   },
 // ];
+
+/*
+const domains = [
+  {
+    id: 1,
+    domain: 'StoneGrey',
+    range: '...'
+  },
+  {
+    id: 1,
+    domain: 'StoneGrey',
+
+  }
+]
+*/
