@@ -6,7 +6,7 @@ export const setAllowRegistration = () => {
   const settings = JSON.parse(localStorage.getItem('settings'));
 
   // Toggle
-  settings.allowRegistration = settings.allowRegistration;
+  settings.allowRegistration = !settings.allowRegistration;
 
   // Set back to localStorage
   localStorage.setItem('settings', JSON.stringify(settings));

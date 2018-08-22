@@ -1,11 +1,13 @@
 import { ALLOW_REGISTRATION } from '../actions/types';
 
-export default function(state = {}, action) {
+const initialState = {allowRegistration: true}
+
+export default function(state = initialState, action) {
   switch (action.type) {
     case ALLOW_REGISTRATION:
       return {
         ...state,
-        allowRegistration: action.payload
+        allowRegistration: state.allowRegistration
       };
     default:
       return state;
