@@ -19,12 +19,6 @@ const firebaseConfig = {
   messagingSenderId: "332607498095"
 };
 
-const store = createStoreWithFirebase(
-  rootReducer,
-  initialState,
-  composeWithDevTools(
-  reactReduxFirebase(firebase)
-));
 
 
 // react-redux-firebase config
@@ -69,10 +63,9 @@ const initialState = { settings: JSON.parse(localStorage.getItem('settings')) };
 const store = createStoreWithFirebase(
   rootReducer,
   initialState,
-  compose(
-    reactReduxFirebase(firebase),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
-);
+  composeWithDevTools(
+  reactReduxFirebase(firebase)
+));
+
 
 export default store;
