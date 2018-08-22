@@ -12,8 +12,8 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/register",
+        "destination": "/build/index.html"
       }
     ]
   }

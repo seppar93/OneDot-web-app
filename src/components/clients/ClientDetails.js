@@ -9,12 +9,6 @@ import classnames from 'classnames';
 
 class ClientDetails extends Component {
 
-
-
-    // Update in firestore
-    // firestore.update({ collection: 'clients', doc: client.id }, clientUpdate);
-
-
   // Delete client
   onDeleteClick = () => {
     const { client, firestore, history } = this.props;
