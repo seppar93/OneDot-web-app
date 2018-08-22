@@ -3,6 +3,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 import { reactReduxFirebase, firebaseReducer } from 'react-redux-firebase';
 import { reduxFirestore, firestoreReducer } from 'redux-firestore';
+import { composeWithDevTools } from 'redux-devtools-extension';
 // Reducers
 import notifyReducer from './reducers/notifyReducer';
 import settingsReducer from './reducers/settingsReducer';
@@ -17,6 +18,14 @@ const firebaseConfig = {
   storageBucket: "onedotwebapp.appspot.com",
   messagingSenderId: "332607498095"
 };
+
+const store = createStoreWithFirebase(
+  rootReducer,
+  initialState,
+  composeWithDevTools(
+  reactReduxFirebase(firebase)
+));
+
 
 // react-redux-firebase config
 const rrfConfig = {
