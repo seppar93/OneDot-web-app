@@ -50,7 +50,7 @@ const rootReducer = combineReducers({
 // Check for settings in localStorage
 if (localStorage.getItem('settings') == null) {
   // Default settings
-  const defaultSettings = {allowRegistration: false};
+  const defaultSettings = {allowRegistration: true};
 
   // Set to localStorage
   localStorage.setItem('settings', JSON.stringify(defaultSettings));
