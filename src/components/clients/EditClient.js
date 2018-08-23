@@ -14,6 +14,53 @@ class EditClient extends Component {
     this.colorInput = React.createRef();
     this.priceInput = React.createRef();
   }
+  //
+  // static DictionaryState(dictionary) = {
+  //   const { client, firestore, history } = this.props;
+  //
+  //   function Dictionary() {
+  //     this.dataSotre = [];
+  //
+  //     this.add =  function (key, value) {
+  //       if (key && value) {
+  //         this.dataSotre.push({
+  //           key: key,
+  //           value: value
+  //         });
+  //         return this.dataSotre;
+  //       }
+  //     };
+  //
+  //     this.removeAt = function (key) {
+  //       for (let i = 0; i < this.dataSotre.length; i++) {
+  //         if(this.dataSotre[i].key === key) {
+  //           this.dataSotre.splice(this.dataSotre[i],1);
+  //           return this.dataSotre;
+  //         }
+  //       }
+  //       return this.dataSotre;
+  //     };
+  //
+  //     this.findAt = function(key) {
+  //       for (let i = 0; i < this.dataSotre.length; i++) {
+  //         if(this.dataSotre[i].key === key) {
+  //           return this.dataSotre[i].value;
+  //         }
+  //       }
+  //       return `Not Found ${this.dataSotre.length}`;
+  //     };
+  //   }
+  // }
+
+
+
+
+
+
+
+
+
+
   // static validation()
   onSubmit = e => {
     e.preventDefault();
